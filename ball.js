@@ -5,8 +5,8 @@ export class Ball {
         this.vy = speed // y 좌표값을 움직이는 속도
 
         const diameter = this.radius * 2
-        this.x = diameter + (Math.random() * stageWidth - diameter)
-        this.y = diameter + (Math.random() * stageHeight - diameter)
+        this.x = diameter + (Math.random() * (stageWidth - diameter))
+        this.y = diameter + (Math.random() * (stageHeight - diameter))
     }
 
     draw (ctx, stageWidth, stageHeight, block) {
