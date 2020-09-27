@@ -12,11 +12,12 @@ export class Block {
         const xGap = 80
         const yGap = 60
 
-        ctx.fillStyle = '#ff384e'
+        ctx.fillStyle = 'red' // '#ff384e'
         ctx.beginPath()
         ctx.rect(this.x, this.y, this.width, this.height)
         ctx.fill()
 
+        // 아래 그림자
         ctx.fillStyle = '#190f3a'
         ctx.beginPath()
         ctx.moveTo(this.maxX, this.maxY)
@@ -25,6 +26,7 @@ export class Block {
         ctx.lineTo(this.x, this.maxY)
         ctx.fill()
 
+        // 왼쪽 측면 그림자
         ctx.fillStyle = '#9d0919'
         ctx.beginPath()
         ctx.moveTo(this.x, this.y)
